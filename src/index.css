@@ -1,0 +1,111 @@
+/* Y2K & Cyberpunk Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --neon-pink: #ff00ff;
+  --neon-cyan: #00ffff;
+  --electric-blue: #2929b6;
+  --retro-gray: #c0c0c0;
+  --win-shadow: #808080;
+  --win-light: #ffffff;
+  
+  font-family: 'Gulim', 'Malgun Gothic', sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+  
+  /* Y2K 배경: 구름 + 그리드 */
+  background: 
+    linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.2), transparent 70%),
+    linear-gradient(135deg, #00bfff 0%, #1e90ff 50%, #00008b 100%);
+  background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
+  background-attachment: fixed;
+}
+
+/* 전체 레이아웃 컨테이너 */
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 20px auto;
+  min-height: 95vh;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 
+    0 0 10px var(--neon-cyan),
+    0 0 20px var(--neon-pink),
+    inset 0 0 20px rgba(0, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* 공통 박스 스타일 (윈도우 창 느낌) */
+.notice-box, .contact-form-section, .blog-post {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--neon-cyan);
+  padding: 20px;
+  border-radius: 0;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 0 rgba(0, 255, 255, 0.3);
+}
+
+/* 레트로 버튼 (Win 95 스타일) */
+.retro-button {
+  background: #c0c0c0;
+  color: #000;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+  transition: all 0.1s;
+  text-transform: uppercase;
+}
+
+.retro-button:active {
+  border: 2px solid #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.retro-button:hover {
+  background: var(--neon-pink);
+  color: #fff;
+}
+
+
+/* 공통 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 반응형 공통 */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    min-height: 100vh;
+  }
+}

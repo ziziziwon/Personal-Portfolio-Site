@@ -1,0 +1,89 @@
+.sidebar {
+  width: 260px;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #e7e7e7;
+  border: 5px dotted blue;
+  border-radius: 15px;
+}
+
+.sidebar-header h1 {
+text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: blue;
+}
+
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  color: blue;
+}
+
+
+.menu-item:hover {
+  background: var(--neon-pink);
+  color: #fff;
+  border-color: #fff;
+  transform: scale(1.05) skew(-5deg);
+}
+
+.menu-item.active {
+  background: var(--neon-cyan);
+  color: #ffffff;
+  border-color: #fff;
+  font-weight: 900;
+}
+
+.badge, .new-badge, .sub-text {
+  font-size: 10px;
+  padding: 2px 5px;
+  background: #000;
+  color: var(--neon-cyan);
+  border-radius: 4px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.new-badge {
+  background: var(--neon-pink);
+  color: #fff;
+  animation: blink 1s infinite;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.sidebar-notice {
+  background: linear-gradient(135deg, #c0c0c0 0%, #ffffff 50%, #c0c0c0 100%);
+  padding: 15px;
+  border: 2px solid #fff;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #808080;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #000;
+}
+
+.sidebar-notice p {
+  margin: 5px;
+  text-align: center;
+}
+
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid var(--neon-pink);
+  }
+}

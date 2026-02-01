@@ -1,0 +1,90 @@
+.qna-container {
+  background-color: white;
+  border: 4px double var(--neon-pink);
+  padding: 40px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  /* Y2K 네온 느낌 살짝 추가 */
+  outline: 3px dotted var(--neon-cyan);
+  outline-offset: 5px;
+}
+
+.qna-title {
+  text-align: center;
+  color: blue;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  border-bottom: 2px dashed var(--neon-pink);
+  padding-bottom: 15px;
+}
+
+.qna-paper {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid var(--neon-pink);
+}
+
+.qna-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.qna-table tr {
+  border-bottom: 1px dotted var(--neon-pink);
+}
+
+.qna-table tr:last-child {
+  border-bottom: none;
+}
+
+.qna-question {
+  background-color: #ffeefe; 
+  color: rgb(57, 57, 57);
+  padding: 12px 15px;
+  font-weight: bold;
+  width: 30%;
+  border-right: 1px dotted var(--neon-pink);
+  vertical-align: top;
+}
+
+.qna-answer {
+  background-color: #fff;
+  padding: 12px 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.qna-num {
+  color: blue;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.qna-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--neon-pink);
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .qna-question {
+    width: 100%;
+    display: block;
+    border-right: none;
+    border-bottom: 1px dotted #ffffff;
+  }
+  
+  .qna-answer {
+    display: block;
+  }
+  
+  .qna-container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,24 @@
+.main-content {
+  flex: 1;
+
+  overflow-y: auto;
+  padding: 0;
+  position: relative;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 12px;
+}
+.main-content::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 1px solid var(--neon-cyan);
+}
+.main-content::-webkit-scrollbar-thumb {
+  background: var(--neon-pink);
+  border: 2px solid #fff;
+}
+
+
+.page-content {
+  animation: fadeIn 0.5s ease-out;
+}

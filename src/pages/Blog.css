@@ -1,0 +1,130 @@
+.notice-box.blog-box {
+  border: 3px dotted var(--neon-cyan) !important;
+  border-radius: 5px;
+  padding: 40px !important;
+}
+
+.blog-title {
+  text-align: center;
+  color: var(--neon-cyan);
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.blog-intro {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 40px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-post-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 25px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.blog-post-card:hover {
+  background: rgba(255, 0, 255, 0.05);
+  border-color: var(--neon-pink);
+  transform: translateX(10px);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.post-category {
+  color: var(--neon-pink);
+  font-weight: bold;
+}
+
+.post-date {
+  color: #888;
+}
+
+.post-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.post-emoji {
+  margin-right: 5px;
+}
+
+.post-excerpt {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.post-footer {
+  text-align: right;
+}
+
+.read-more {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.read-more:hover {
+  color: var(--neon-pink);
+  text-decoration: underline;
+}
+
+.blog-pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.page-num {
+  padding: 5px 10px;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.page-num.active {
+  background: var(--neon-cyan);
+  color: #000;
+  font-weight: bold;
+}
+
+.page-num:hover:not(.active) {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .blog-box {
+    padding: 20px !important;
+  }
+  
+  .post-title {
+    font-size: 18px;
+  }
+}

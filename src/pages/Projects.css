@@ -1,0 +1,115 @@
+.notice-box.projects-box {
+  border: 3px dotted var(--neon-cyan);
+  border-radius: 5px;
+  padding: 40px !important;
+}
+
+.projects-title {
+  text-align: center;
+  color: var(--neon-cyan);
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.project-card {
+  /* Flexbox Item 설정 */
+  flex: 1 1 300px;
+  max-width: 350px;
+  
+  /* 카드 스타일 */
+  background: #fff;
+  padding: 20px;
+  border: 2px solid var(--neon-pink);
+  box-shadow: 5px 5px 0 var(--neon-cyan);
+  transition: transform 0.2s;
+  position: relative; /* index.css의 가상요소 위치 잡기 위해 */
+}
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  z-index: 10;
+}
+
+.project-card h3 {
+  color: var(--neon-pink);
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px dotted var(--neon-cyan);
+  padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-tech {
+  color: blue;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 15px;
+  background: #f0f0f0;
+  padding: 2px 5px;
+  display: inline-block;
+}
+
+.project-desc {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  height: 4.8em; /* 약 3줄 */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-link {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  background: #fff;
+  color: blue;
+  text-decoration: none;
+  border: 1px solid blue;
+  font-size: 13px;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 0 #ccc;
+}
+
+.project-link:hover {
+  background: var(--neon-pink);
+  color: #fff;
+  border-color: var(--neon-pink);
+  box-shadow: 2px 2px 0 var(--neon-cyan);
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}

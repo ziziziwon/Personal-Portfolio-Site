@@ -1,0 +1,180 @@
+.contact-page-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.notice-box.contact-box {
+  border: 3px dotted var(--neon-cyan) !important;
+  border-radius: 5px;
+  padding: 40px !important;
+}
+
+.contact-header {
+  text-align: left;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.status-dot-green {
+  width: 10px;
+  height: 10px;
+  background: #00ff00;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  box-shadow: 0 0 8px #00ff00;
+  animation: blink 1s infinite;
+}
+
+.contact-main-title {
+  font-size: 28px;
+  text-align: center;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.contact-sub-title {
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+}
+
+/* 연락처 섹션 */
+.contact-methods-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.method-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 255, 0.3);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s;
+}
+
+.method-card:hover {
+  background: rgba(255, 0, 255, 0.1);
+  border-color: var(--neon-pink);
+  transform: translateX(10px);
+}
+
+.method-icon {
+  font-size: 24px;
+}
+
+.method-info label {
+  display: block;
+  font-size: 12px;
+  color: blue;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.method-info a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.method-info a:hover {
+  text-decoration: underline;
+  color: var(--neon-cyan);
+}
+
+/* 폼 섹션 */
+.contact-form-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 25px;
+  position: relative;
+}
+
+.form-header {
+  margin-bottom: 17px;
+}
+
+.form-tag {
+  background: var(--neon-pink);
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: var(--neon-cyan);
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #fff;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--neon-pink) !important;
+  color: #fff !important;
+  padding: 15px !important;
+  font-size: 16px !important;
+  box-shadow: 0 4px 0 #800080 !important;
+}
+
+.submit-btn:hover {
+  background: var(--neon-cyan) !important;
+  color: #000 !important;
+  box-shadow: 0 4px 0 #008080 !important;
+}
+
+.contact-footer-alert {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: blue;
+  border: 1px dashed blue;
+  padding: 10px;
+}
+
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .method-card:hover {
+    transform: none;
+  }
+}
