@@ -52,6 +52,10 @@ export const Sidebar: React.FC = () => {
         <p> 개인 포폴 사이트입니다.</p>
         <p>☆ 프로젝트 및 협업 문의 환영 ☆</p>
       </div>
+      <div className="sidebar-notice-2">
+        <p> 100% 모든걸 직접 구현했습니다. </p>
+        <p> AI랑 함께...ㅎㅎ </p>
+      </div>
     </aside>
   );
 };

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ziziziwon.github.io/Personal-Portfolio-Site/",
+  "homepage": "https://jjw0144.mycafe24.com/popo/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

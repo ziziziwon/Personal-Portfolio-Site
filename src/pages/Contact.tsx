@@ -25,7 +25,7 @@ export const Contact: React.FC = () => {
               <span className="method-icon">📧</span>
               <div className="method-info">
                 <label>DIRECT_MAIL</label>
-                <a href="jjw12338@gmail.com">jjw12338@gmail.com</a>
+                <a href="mailto:jjw12338@gmail.com">jjw12338@gmail.com</a>
               </div>
             </div>
 
@@ -41,7 +41,7 @@ export const Contact: React.FC = () => {
               <span className="method-icon">💼</span>
               <div className="method-info">
                 <label>INSTAGRAM_ID</label>
-                <a href="@youaremysavior" target="_blank" rel="noreferrer">@youaremysavior</a>
+                <a href="https://www.instagram.com/youaremysavior" target="_blank" rel="noreferrer">@youaremysavior</a>
               </div>
             </div>
 
@@ -49,7 +49,7 @@ export const Contact: React.FC = () => {
               <span className="method-icon">📝</span>
               <div className="method-info">
                 <label>CALL_ME</label>
-                <a href="010-8878-6449" target="_blank" rel="noreferrer">010-8878-6449</a>
+                <a href="tel:010-8878-6449">010-8878-6449</a>
               </div>
             </div>
           </div>

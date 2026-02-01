@@ -79,6 +79,11 @@ text-align: center;
   text-align: center;
 }
 
+.sidebar-notice-2 {
+  font-size: 10px;
+  color: var(--neon-pink);
+}
+
 
 @media (max-width: 1024px) {
   .sidebar {

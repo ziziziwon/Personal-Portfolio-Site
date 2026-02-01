@@ -50,12 +50,12 @@
 }
 
 .post-category {
-  color: var(--neon-pink);
+  color: blue;
   font-weight: bold;
 }
 
 .post-date {
-  color: #888;
+  color: blue;
 }
 
 .post-title {
@@ -79,52 +79,202 @@
   text-align: right;
 }
 
-.read-more {
-  color: var(--neon-cyan);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.read-more:hover {
-  color: var(--neon-pink);
-  text-decoration: underline;
-}
-
+/* Pagination Styling */
 .blog-pagination {
   margin-top: 50px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
 }
 
 .page-num {
-  padding: 5px 10px;
+  background: transparent;
   border: 1px solid var(--neon-cyan);
   color: var(--neon-cyan);
   cursor: pointer;
   font-size: 14px;
   transition: all 0.2s;
+  padding: 8px 12px;
+  min-width: 35px;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-num.active {
   background: var(--neon-cyan);
   color: #000;
   font-weight: bold;
+  box-shadow: 0 0 10px var(--neon-cyan);
 }
 
 .page-num:hover:not(.active) {
-  background: rgba(0, 255, 255, 0.1);
+  background: rgba(0, 255, 255, 0.2);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.page-num.next {
+  padding: 8px 15px;
+  font-weight: bold;
+}
+
+/* Read More Button Styling */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--neon-cyan);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0;
+  font-family: inherit;
+}
+
+.read-more-btn:hover {
+  color: var(--neon-pink);
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left: 0 */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-window {
+  background: #000;
+  width: min(90%, 800px); /* 90% width but max 800px */
+  max-height: 85vh;
+  margin: auto; /* Fallback centering */
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: var(--neon-pink);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--neon-pink);
+}
+
+.modal-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-close-btn {
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+.modal-content {
+  padding: 30px;
+  overflow-y: auto;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--neon-pink);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.modal-meta {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.modal-body h3 {
+  color: var(--neon-cyan);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.modal-body p {
+  margin-bottom: 10px;
+}
+
+.modal-body ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
-  .blog-box {
-    padding: 20px !important;
+  .modal-window {
+    width: 95%;
+    max-height: 90vh;
   }
   
-  .post-title {
-    font-size: 18px;
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .modal-meta {
+    flex-direction: column;
+    gap: 5px;
   }
 }
